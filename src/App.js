@@ -1,22 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { GuineaPigs } from './GuineaPigs';
+import { GuineaPigsContainer } from './containers/GuineaPigsContainer';
 
 function App() {
+  const h1 = <h1>Separate Container Components From Presentational Components</h1>
+  const h1CreateComponent = <h1>Create Container Component</h1>
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {h1}
+        <GuineaPigs />
+        {h1CreateComponent}
+        <GuineaPigsContainer />
       </header>
     </div>
   );
